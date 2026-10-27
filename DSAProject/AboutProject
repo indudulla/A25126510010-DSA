@@ -1,0 +1,131 @@
+FoodExpress – Online Food Delivery Order Management Using Queues
+
+Project Overview:
+FoodExpress is a Java-based desktop application that simulates an online food delivery ordering system. It provides a customer interface for placing food orders and a restaurant dashboard for managing orders using the Queue data structure.
+The project demonstrates the FIFO (First In, First Out) principle, where the first order placed is the first order processed.
+
+Objectives
+
+To implement the Queue data structure in a real-world application.
+
+To demonstrate enqueue and dequeue operations.
+
+To develop a user-friendly graphical interface using Java Swing.
+
+To manage customer orders and track pending and delivered orders.
+
+Features
+
+1. Customer Interface
+
+Displays available food items with prices.
+
+Allows customers to select food items.
+
+Accepts customer names and order quantities.
+
+Generates unique order IDs starting from 101.
+
+Confirms successful order placement.
+
+2. Restaurant Dashboard
+
+Displays the number of pending and delivered orders.
+
+Visualizes the order queue from FRONT to REAR.
+
+Shows order details, including order ID, customer name, food item, and quantity.
+
+Provides an option to process the next order.
+
+Allows users to refresh the queue display.
+
+Supports navigation between the customer view and restaurant dashboard.
+
+3. Queue Management
+
+Enqueue: New orders are added to the rear of the queue.
+
+Dequeue: The next order is removed from the front of the queue.
+
+FIFO: Orders are processed in the same order in which they were placed.
+
+Order Tracking: Processed orders are stored separately in a delivered orders list.
+
+🛠️ Technologies Used
+
+Programming Language: Java
+
+GUI Framework: Java Swing
+
+Layout and Styling: Java AWT
+
+Data Structures: Queue, LinkedList, ArrayList
+
+IDE: Visual Studio Code or any Java-compatible IDE
+
+🧠 Data Structures Used
+
+Queue
+
+A Queue follows the FIFO (First In, First Out) principle. It is used to maintain pending food orders.
+
+The application uses:
+
+Queue<Order> orderQueue = new LinkedList<>();
+
+add() inserts a new order into the queue.
+
+poll() removes and returns the first order.
+
+isEmpty() checks whether the queue contains any orders.
+
+ArrayList
+
+An ArrayList stores orders that have been delivered.
+
+List<Order> deliveredOrders = new ArrayList<>();
+
+Order Class
+
+The Order class stores the details of each order:
+
+Order ID
+
+Customer name
+
+Food item
+
+Quantity
+
+Order status
+
+⚙️ Application Workflow
+
+The customer opens the FoodExpress application.
+
+The customer selects a food item and clicks ORDER NOW.
+
+The customer enters their name and quantity.
+
+The application creates a new order with a unique ID.
+
+The order is added to the rear of the queue.
+
+The restaurant dashboard displays the pending orders.
+
+The restaurant clicks PROCESS NEXT ORDER.
+
+The first order is removed from the queue and marked as delivered.
+
+The dashboard updates the pending and delivered order counts.
+
+📂 Project Structure
+
+FoodExpress/
+├── FoodDeliveryApp.java
+├── README.md
+└── screenshots/
+    ├── customer-screen.png
+    ├── order-dialog.png
+    └── restaurant-dashboard.png
